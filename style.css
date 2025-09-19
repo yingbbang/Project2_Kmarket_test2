@@ -1,0 +1,121 @@
+/* 전체 기본 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* 헤더 */
+.header {
+  background: #d7000f;
+  display: flex;
+  justify-content: space-between;
+  height: 110px;
+  align-items: center;
+  padding: 10px 20px 0px 20px;
+  color: #fff;
+}
+
+.header-logo img {
+}
+
+.header-nav a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 컨테이너 */
+.container {
+  display: flex;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu {
+  border-bottom: 2px solid #eee;
+  text-decoration: none;
+}
+
+.menu a {
+  text-decoration: none;   /* 밑줄 제거 */
+  color: #030303;           /* 기본 글자색 */ 
+  display: block;          /* 전체 영역 클릭 가능 */
+}
+
+.menu a:hover {
+  color: #d7000f;              /* 마우스 올리면 빨강색 */
+  font-weight: bold;       /* 마우스 올리면 글씨 굵게 */
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px; /* 위아래12px, 좌우30px */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-title .arrow {
+  transition: transform 0.3s;  /* 부드러운 회전 */
+}
+
+.menu.open .menu-title .arrow {
+  transform: rotate(180deg);   /* 열린 상태에서는 뒤집기 */
+}
+
+
+.submenu {
+  color: #aaa;           /* 기본 글자색 */ 
+}
+
+.submenu li {
+  color: #aaa;             /* 기본은 회색 */
+  text-decoration: none;   /* 밑줄 제거 */
+  font-weight: normal;     /* 기본 굵기 */
+  display: block;          /* li 영역 클릭 가능 */
+  padding: 5px 0;          /* 위아래 여백 */
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+}
+
+.submenu {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu.open .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 8px 15px 8px 50px;  /* ← 여기서 왼쪽 들여쓰기 40px */
+  font-size: 16px;
+  color: #aaa;
+}
+
+.submenu li.active {
+  color: #d7000f;
+  font-weight: bold;
+}
+
+.submenu li.disabled {
+  color: #aaa;
+}

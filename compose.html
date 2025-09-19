@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>BNK Market - 기본설정</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="images/logo.png" alt="BNK Market 로고">
+    </div>
+    <nav class="header-nav">
+      <a href="#">홈</a>
+      <a href="#">로그아웃</a>
+      <a href="#">고객센터</a>
+    </nav>
+  </header>
+
+  <!-- 메인 컨테이너 -->
+  <div class="container">
+    <!-- 좌측 사이드바 -->
+    <aside class="sidebar">
+      <ul>
+        <li class="menu open">
+          <div class="menu-title">
+            환경설정
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="active">기본설정</li>
+            <li class="disabled">배너관리</li>
+            <li class="disabled">약관관리</li>
+            <li class="disabled">카테고리</li>
+            <li class="disabled">버전관리</li>
+          </ul>
+        </li>
+        <li class="menu">
+          <div class="menu-title">
+            상점관리
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+        </li>
+        <li class="menu">
+          <div class="menu-title">
+            회원관리
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+        </li>
+        <li class="menu">
+          <div class="menu-title">
+            주문관리
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+        </li>
+        <li class="menu">
+          <div class="menu-title">
+            고객센터
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- 본문 -->
+    <main class="content">
+      <div class="breadcrumb">HOME &gt; 환경설정 &gt; <strong>기본설정</strong></div>
+
+      <h1>기본설정</h1>
+
+      <!-- 버전 정보 -->
+      <section class="setting-box">
+        <h2>버전 정보</h2>
+        <p>현재 사이트 버전입니다.</p>
+        <div class="form-row">
+          <label>사이트 버전</label>
+          <input type="text" value="1.0.1-RELEASE" readonly>
+        </div>
+      </section>
+
+      <!-- 사이트 -->
+      <section class="setting-box">
+        <h2>사이트</h2>
+        <p>브라우저 탭, 헤더 및 푸터 노출 정보입니다.</p>
+        <div class="form-row">
+          <label>제목</label>
+          <input type="text" value="비엔케이마켓">
+        </div>
+        <div class="form-row">
+          <label>부제</label>
+          <input type="text" value="더바른쇼핑한선택">
+        </div>
+        <div class="btn-wrap">
+          <button class="btn">수정하기</button>
+        </div>
+      </section>
+
+      <!-- 로고 -->
+      <section class="setting-box">
+        <h2>로고</h2>
+        <p>브라우저 탭, 헤더 및 푸터 노출 정보입니다.</p>
+        <div class="form-row">
+          <label>헤더 로고</label>
+          <input type="file"> <span class="desc">크기 370 x 76 권장</span>
+        </div>
+        <div class="form-row">
+          <label>푸터 로고</label>
+          <input type="file"> <span class="desc">크기 155 x 36 권장</span>
+        </div>
+        <div class="form-row">
+          <label>파비콘</label>
+          <input type="file"> <span class="desc">크기 32 x 32 권장</span>
+        </div>
+        <div class="btn-wrap">
+          <button class="btn">수정하기</button>
+        </div>
+      </section>
+
+      <!-- 기업 정보 -->
+      <section class="setting-box">
+        <h2>기업 정보</h2>
+        <p>푸터에 노출되는 기업 정보입니다.</p>
+        <div class="form-row"><label>제목</label><input type="text" value="비엔케이마켓"></div>
+        <div class="form-row"><label>부제</label><input type="text" value="더바른쇼핑한선택"></div>
+        <div class="form-row"><label>사업자등록번호</label><input type="text" value="123-12-12345"></div>
+        <div class="form-row"><label>통신판매업신고</label><input type="text" value="2024-서울강남-1234"></div>
+        <div class="form-row"><label>기본주소</label><input type="text" value="부산광역시 남구"></div>
+        <div class="form-row"><label>상세주소</label><input type="text" value="문현금융로 30"></div>
+        <div class="btn-wrap">
+          <button class="btn">수정하기</button>
+        </div>
+      </section>
+
+      <!-- 고객센터 정보 -->
+      <section class="setting-box">
+        <h2>고객센터 정보</h2>
+        <p>푸터에 노출되는 기업 정보입니다.</p>
+        <div class="form-row"><label>제목</label><input type="text" value="02-1234-5678"></div>
+        <div class="form-row"><label>업무시간</label><input type="text" value="평일 09:00 ~ 18:00"></div>
+        <div class="form-row"><label>이메일</label><input type="email" value="admin@bnkmarket.com"></div>
+        <div class="form-row"><label>전자금융거래 분쟁담당</label><input type="text" value="1234-1234"></div>
+        <div class="btn-wrap">
+          <button class="btn">수정하기</button>
+        </div>
+      </section>
+
+      <!-- 카피라이트 -->
+      <section class="setting-box">
+        <h2>카피라이트</h2>
+        <p>푸터에 노출되는 기업 정보입니다.</p>
+        <div class="form-row">
+          <label>카피라이트</label>
+          <input type="text" value="Copyright BNKmarket. All rights reserved.">
+        </div>
+        <button class="btn">수정하기</button>
+      </section>
+    </main>
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <!-- 상단 링크 -->
+    <div class="footer-top">
+      <div class="footer-links">
+        <a href="#">회사소개</a>
+        <a href="#">서비스이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">전자금융거래약관</a>
+      </div>
+    </div>
+
+    <!-- 하단 정보 -->
+    <div class="footer-bottom">
+      <!-- 왼쪽영역 : 회사 정보 -->
+      <div class="footer-left">
+        <img src="images/logo2.png" alt="BNK Market 로고" class="footer-logo">
+        <div class="footer-company">
+          <strong>(주)비엔케이마켓</strong><br>
+          부산광역시 남구 문현금융로 30<br>
+          대표이사 : 홍길동<br>
+          사업자등록번호 : 123-45-12345
+        </div>
+      </div>
+
+      <!-- 오른쪽 영역 : 고객센터 -->
+      <div class="footer-right">
+        <div class="footer-center">
+          <strong>고객센터</strong><br>
+          Tel : 1234-5678 (평일 09:00 ~ 18:00)<br>
+          전자금융거래 분쟁 담당 : 1234-1234 (365일 09:00~18:00)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+  document.querySelectorAll(".menu-title").forEach(title => {
+    title.addEventListener("click", () => {
+      const parent = title.parentElement;
+      parent.classList.toggle("open");
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>BNK Market - 기본설정</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="images/logo.png" alt="BNK Market 로고">
+    </div>
+    <nav class="header-nav">
+      <a href="#">홈</a>
+      <a href="#">마이페이지</a>
+      <a href="#">로그아웃</a>
+      <a href="#">고객센터</a>
+    </nav>
+  </header>
+
+  <!-- 메인 컨테이너 -->
+  <div class="container">
+    <!-- 좌측 사이드바 -->
+    <aside class="sidebar">
+      <ul>
+        <!-- (1) 환경설정 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">환경설정</a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">기본설정</a></li>
+            <li class="disabled"><a href="#">배너관리</a></li>
+            <li class="disabled"><a href="#">약관관리</a></li>
+            <li class="disabled"><a href="#">카테고리</a></li>
+            <li class="disabled"><a href="#">버전관리</a></li>
+          </ul>
+        </li>
+        <!-- (2) 상점관리 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">상점관리 </a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">상점목록</a></li>
+            <li class="disabled"><a href="#">매출현황</a></li>
+          </ul>
+        </li>
+        <!-- (3) 회원관리 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">회원관리</a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">회원목록</a></li>
+            <li class="disabled"><a href="#">포인트관리</a></li>
+          </ul>
+        </li>
+        <!-- (4) 상품관리 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">상품관리</a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">상품목록</a></li>
+            <li class="disabled"><a href="#">상품등록</a></li>
+          </ul>
+        </li>
+        <!-- (5) 주문관리 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">주문관리</a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">주문현황</a></li>
+            <li class="disabled"><a href="#">배송현황</a></li>
+          </ul>
+        </li>
+        <!-- (6) 고객센터 -->
+        <li class="menu">
+          <div class="menu-title">
+            <a href="#">고객센터</a>
+            <img src="images/arrow_1.png" alt="화살표" class="arrow">
+          </div>
+          <ul class="submenu">
+            <li class="disabled"><a href="#">공지사항</a></li>
+            <li class="disabled"><a href="#">자주묻는질문</a></li>
+            <li class="disabled"><a href="#">문의하기</a></li>
+          </ul> 
+    </aside>
+ 
+
+  <!-- JS -->
+  <script>
+  document.querySelectorAll(".menu-title").forEach(title => {
+    title.addEventListener("click", () => {
+      const parent = title.parentElement;
+      parent.classList.toggle("open");
+    });
+  });
+  </script>
+</body>
+</html>

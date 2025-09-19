@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>BNK Market - 기본설정</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-rows: 60px 1fr auto;
+      grid-template-columns: 250px 1fr;
+      grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+      height: 100vh;
+    }
+
+    /* 헤더 */
+    header {
+      grid-area: header;
+      background: #d71920;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    header img { height: 30px; }
+    .header-nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* 사이드바 */
+    aside.sidebar {
+      grid-area: sidebar;
+      background: #f7f7f7;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .sidebar ul { list-style:none; padding:0; margin:0; }
+    .menu-title { font-weight:bold; margin:15px 0 5px; cursor:pointer; }
+    .submenu { margin-left:10px; display:none; }
+    .menu.open .submenu { display:block; }
+    .submenu li { margin:5px 0; }
+    .submenu li a { color:#333; text-decoration:none; font-size:14px; }
+
+    /* 본문 */
+    main.content {
+      grid-area: content;
+      padding: 20px;
+      overflow-y: auto;
+      background:#fff;
+    }
+
+    .page-title {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:2px solid #333;
+      padding-bottom:5px;
+      margin-bottom:20px;
+    }
+    .page-title h2 { margin:0; font-size:18px; font-weight:bold; }
+    .breadcrumb { font-size:14px; color:#555; }
+
+    .info-title { font-size:12px; color:#333; margin-top:20px; }
+    .info-box { background:#f7f8fa; padding:15px; margin:10px 0; }
+    .version-box table { width:100%; border-collapse:collapse; font-size:14px; }
+    .version-box th, .version-box td { padding:8px; border-bottom:1px solid #eee; text-align:left; }
+    .version-box th { background:#f7f8fa; width:150px; }
+    input[type="text"], input[type="file"], input[type="email"] {
+      padding:5px;
+      border:1px solid #ccc;
+      background:#f0f0f0;
+      color:#666;
+      width:250px;
+    }
+    .btn { background:#111; color:#fff; padding:8px 15px; border:none; cursor:pointer; float:right; margin-top:10px; }
+
+    /* 푸터 */
+    footer {
+      grid-area: footer;
+      background: #222;
+      color: #ccc;
+      font-size: 12px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header>
+    <div class="header-logo"><img src="images/logo.png" alt="BNK Market"></div>
+    <nav class="header-nav">
+      <a href="#">홈</a>
+      <a href="#">마이페이지</a>
+      <a href="#">로그아웃</a>
+      <a href="#">고객센터</a>
+    </nav>
+  </header>
+
+  <!-- 사이드바 -->
+  <aside class="sidebar">
+    <ul>
+      <li class="menu">
+        <div class="menu-title">환경설정</div>
+        <ul class="submenu">
+          <li><a href="#">기본설정</a></li>
+          <li><a href="#">배너관리</a></li>
+          <li><a href="#">약관관리</a></li>
+          <li><a href="#">카테고리</a></li>
+          <li><a href="#">버전관리</a></li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div class="menu-title">상점관리</div>
+        <ul class="submenu">
+          <li><a href="#">상점목록</a></li>
+          <li><a href="#">매출현황</a></li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div class="menu-title">회원관리</div>
+        <ul class="submenu">
+          <li><a href="#">회원목록</a></li>
+          <li><a href="#">포인트관리</a></li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div class="menu-title">상품관리</div>
+        <ul class="submenu">
+          <li><a href="#">상품목록</a></li>
+          <li><a href="#">상품등록</a></li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div class="menu-title">주문관리</div>
+        <ul class="submenu">
+          <li><a href="#">주문현황</a></li>
+          <li><a href="#">배송현황</a></li>
+        </ul>
+      </li>
+      <li class="menu">
+        <div class="menu-title">고객센터</div>
+        <ul class="submenu">
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주묻는질문</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- 본문 -->
+  <main class="content">
+    <div class="page-title">
+      <h2>기본설정</h2>
+      <div class="breadcrumb">HOME &gt; 환경설정 &gt; <strong>기본설정</strong></div>
+    </div>
+
+    <!-- (1) 버전정보 -->
+    <div class="info-title"><h3>버전정보</h3></div>
+    <div class="info-box"><strong>현재 사이트 버전입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>사이트 버전</th><td><strong>1.0.1-RELEASE</strong></td></tr>
+      </table>
+    </div>
+
+    <!-- (2) 사이트 -->
+    <div class="info-title"><h3>사이트</h3></div>
+    <div class="info-box"><strong>브라우저 탭, 헤더 및 푸터 노출 정보입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>제목</th><td><input type="text" value="비엔케이마켓"></td></tr>
+        <tr><th>부제</th><td><input type="text" value="바른쇼핑위한선택"></td></tr>
+      </table>
+      <button class="btn">수정하기</button>
+    </div>
+
+    <!-- (3) 로고 -->
+    <div class="info-title"><h3>로고</h3></div>
+    <div class="info-box"><strong>브라우저 탭, 헤더 및 푸터 노출 정보입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>헤더 로고</th><td><input type="file"> <span class="desc">크기 370 x 76 권장</span></td></tr>
+        <tr><th>푸터 로고</th><td><input type="file"> <span class="desc">크기 155 x 36 권장</span></td></tr>
+        <tr><th>파비콘</th><td><input type="file"> <span class="desc">크기 32 x 32 권장</span></td></tr>
+      </table>
+      <button class="btn">수정하기</button>
+    </div>
+
+    <!-- (4) 기업정보 -->
+    <div class="info-title"><h3>기업 정보</h3></div>
+    <div class="info-box"><strong>푸터에 노출되는 기업 정보입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>제목</th><td><input type="text" value="비엔케이마켓"></td></tr>
+        <tr><th>부제</th><td><input type="text" value="더바른쇼핑위한선택"></td></tr>
+        <tr><th>사업자등록번호</th><td><input type="text" value="123-12-12345"></td></tr>
+        <tr><th>통신판매업신고</th><td><input type="text" value="2024-부산남구-1234"></td></tr>
+        <tr><th>기본주소</th><td><input type="text" value="부산광역시 남구"></td></tr>
+        <tr><th>상세주소</th><td><input type="text" value="문현금융로 30"></td></tr>
+      </table>
+      <button class="btn">수정하기</button>
+    </div>
+
+    <!-- (5) 고객센터 -->
+    <div class="info-title"><h3>고객센터</h3></div>
+    <div class="info-box"><strong>푸터에 노출되는 기업 정보입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>제목</th><td><input type="text" value="02-1234-5678"></td></tr>
+        <tr><th>업무시간</th><td><input type="text" value="평일 09:00 ~ 18:00"></td></tr>
+        <tr><th>이메일</th><td><input type="email" value="admin@BNKmarket.com"></td></tr>
+        <tr><th>전자금융거래 분쟁담당</th><td><input type="text" value="1234-1234"></td></tr>
+      </table>
+      <button class="btn">수정하기</button>
+    </div>
+
+    <!-- (6) 카피라이트 -->
+    <div class="info-title"><h3>카피라이트</h3></div>
+    <div class="info-box"><strong>푸터에 노출되는 기업 정보입니다.</strong></div>
+    <div class="version-box">
+      <table>
+        <tr><th>카피라이트</th><td><input type="text" value="Copyright BNKmarket. All rights reserved."></td></tr>
+      </table>
+      <button class="btn">수정하기</button>
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div>(주)비엔케이마켓 | 부산광역시 남구 문현금융로 30 | 대표이사 홍길동</div>
+    <div>고객센터 1234-5678 (평일 09:00~18:00)</div>
+  </footer>
+
+  <!-- JS: 사이드바 아코디언 -->
+  <script>
+    document.querySelectorAll(".menu-title").forEach(title => {
+      title.addEventListener("click", () => {
+        const parent = title.parentElement;
+        parent.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
