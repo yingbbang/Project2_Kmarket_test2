@@ -8,5 +8,3 @@ http://yingbbang.github.io/Project2_Kmarket_test2/sidebar.html
 
 http://yingbbang.github.io/Project2_Kmarket_test2/test.html
 
-http://yingbbang.github.io/Project2_Kmarket_test2
-
